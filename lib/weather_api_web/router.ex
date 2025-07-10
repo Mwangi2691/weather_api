@@ -23,7 +23,8 @@ defmodule WeatherApiWeb.Router do
   # Other scopes may use custom stacks.
    scope "/api", WeatherApiWeb do
      pipe_through :api
-     resources "/reports", ReportController, except: [:new, :edit]
+      resources "/reports", ReportController, only: [:create, :show, :update, :delete]
+     #resources "/reports", ReportController, except: [:new, :edit]
    end
 
   # Enable LiveDashboard and Swoosh mailbox preview in development

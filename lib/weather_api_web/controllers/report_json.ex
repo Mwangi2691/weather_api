@@ -20,7 +20,7 @@ defmodule WeatherApiWeb.ReportJSON do
       id: report.id,
       city: report.city,
       temperature: report.temperature,
-      description: report.description,
+     # description: report.description,
       recorded_at: report.recorded_at
     }
   end
